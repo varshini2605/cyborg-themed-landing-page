@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CYBER-X | The Future of Human Evolution</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#050816;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* Animated Background */
+body::before{
+    content:'';
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:
+    radial-gradient(circle at 20% 30%, rgba(0,255,255,.15), transparent 20%),
+    radial-gradient(circle at 80% 70%, rgba(128,0,255,.15), transparent 20%);
+    z-index:-2;
+}
+
+body::after{
+    content:'';
+    position:fixed;
+    width:100%;
+    height:100%;
+    background-image:
+    linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+    background-size:50px 50px;
+    z-index:-1;
+}
+
+/* Navbar */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    position:fixed;
+    width:100%;
+    top:0;
+    background:rgba(5,8,22,.8);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+}
+
+.logo{
+    font-size:1.8rem;
+    font-family:'Orbitron',sans-serif;
+    font-weight:800;
+    color:#00ffff;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#00ffff;
+}
+
+/* Hero */
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:100px 10%;
+}
+
+.hero-content h1{
+    font-family:'Orbitron',sans-serif;
+    font-size:4rem;
+    margin-bottom:20px;
+    text-shadow:0 0 20px cyan;
+}
+
+.hero-content span{
+    color:#00ffff;
+}
+
+.hero-content p{
+    max-width:700px;
+    margin:auto;
+    font-size:1.1rem;
+    line-height:1.8;
+    color:#d0d0d0;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:15px 35px;
+    border-radius:50px;
+    text-decoration:none;
+    color:white;
+    background:linear-gradient(45deg,#00ffff,#7b2cff);
+    transition:.4s;
+    box-shadow:0 0 20px #00ffff;
+}
+
+.btn:hover{
+    transform:translateY(-5px) scale(1.05);
+}
+
+/* Sections */
+section{
+    padding:100px 10%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:2.5rem;
+    font-family:'Orbitron',sans-serif;
+    margin-bottom:60px;
+    color:#00ffff;
+}
+
+/* About */
+.about{
+    text-align:center;
+}
+
+.about p{
+    max-width:900px;
+    margin:auto;
+    line-height:1.8;
+    color:#cfcfcf;
+}
+
+/* Features */
+.features-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.1);
+    padding:30px;
+    border-radius:20px;
+    backdrop-filter:blur(15px);
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 25px cyan;
+}
+
+.card h3{
+    margin-bottom:15px;
+    color:#00ffff;
+}
+
+/* Gallery */
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.gallery-grid img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    border-radius:15px;
+    transition:.4s;
+}
+
+.gallery-grid img:hover{
+    transform:scale(1.05);
+}
+
+/* Contact */
+.contact form{
+    max-width:700px;
+    margin:auto;
+}
+
+.contact input,
+.contact textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:20px;
+    border:none;
+    border-radius:10px;
+    background:#10182f;
+    color:white;
+}
+
+.contact button{
+    width:100%;
+    border:none;
+    cursor:pointer;
+}
+
+/* Footer */
+footer{
+    text-align:center;
+    padding:30px;
+    background:#02040d;
+    border-top:1px solid rgba(255,255,255,.1);
+}
+
+/* Typing Effect */
+.typing{
+    color:#00ffff;
+}
+
+@media(max-width:768px){
+
+.hero-content h1{
+    font-size:2.6rem;
+}
+
+nav ul{
+    gap:15px;
+    font-size:.9rem;
+}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">CYBER-X</div>
+
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>
+Welcome to <span>CYBER-X</span>
+</h1>
+
+<h2 class="typing"></h2>
+
+<p>
+Experience the next generation of cybernetic intelligence.
+CYBER-X integrates artificial intelligence, neural processing,
+augmented vision, and adaptive learning to redefine the future
+of human evolution.
+</p>
+
+<a href="#features" class="btn">
+Explore Technology
+</a>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about">
+
+<h2 class="section-title">
+About CYBER-X
+</h2>
+
+<p>
+CYBER-X is a futuristic cybernetic platform engineered to
+bridge the gap between humans and artificial intelligence.
+Through neural synchronization, machine learning, and
+advanced sensory systems, CYBER-X enhances productivity,
+decision-making, and digital interaction.
+</p>
+
+</section>
+
+<!-- FEATURES -->
+<section id="features">
+
+<h2 class="section-title">
+Core Features
+</h2>
+
+<div class="features-grid">
+
+<div class="card">
+<h3>🧠 Neural Intelligence</h3>
+<p>
+Advanced AI algorithms capable of learning and adapting in real-time.
+</p>
+</div>
+
+<div class="card">
+<h3>👁 Smart Vision</h3>
+<p>
+Augmented reality overlays and object recognition capabilities.
+</p>
+</div>
+
+<div class="card">
+<h3>⚡ Cybernetic Speed</h3>
+<p>
+Ultra-fast processing and predictive decision systems.
+</p>
+</div>
+
+<div class="card">
+<h3>🔒 Secure Integration</h3>
+<p>
+Military-grade encryption and biometric authentication.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+
+<h2 class="section-title">
+Cyber Gallery
+</h2>
+
+<div class="gallery-grid">
+
+<img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=900" alt="">
+<img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=900" alt="">
+<img src="https://images.unsplash.com/photo-1526378722484-bd91ca387e72?w=900" alt="">
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+
+<h2 class="section-title">
+Connect With CYBER-X
+</h2>
+
+<form>
+
+<input type="text" placeholder="Your Name" required>
+
+<input type="email" placeholder="Your Email" required>
+
+<textarea rows="6" placeholder="Your Message"></textarea>
+
+<button class="btn">
+Transmit Message
+</button>
+
+</form>
+
+</section>
+
+<footer>
+© 2026 CYBER-X | Cyborg Technology Landing Page
+</footer>
+
+<script>
+
+// Typing Animation
+const words = [
+"Artificial Intelligence",
+"Cybernetic Evolution",
+"Neural Connectivity",
+"Future Technology"
+];
+
+let wordIndex = 0;
+let charIndex = 0;
+let currentWord = "";
+let currentChar = "";
+
+const typing = document.querySelector(".typing");
+
+function type(){
+
+if(wordIndex < words.length){
+
+currentWord = words[wordIndex];
+currentChar = currentWord.slice(0, ++charIndex);
+
+typing.textContent = currentChar;
+
+if(currentChar.length == currentWord.length){
+
+wordIndex++;
+
+charIndex = 0;
+
+setTimeout(type,1000);
+
+}else{
+setTimeout(type,120);
+}
+
+}else{
+wordIndex = 0;
+setTimeout(type,500);
+}
+}
+
+type();
+
+// Contact Form
+document.querySelector("form").addEventListener("submit",function(e){
+e.preventDefault();
+alert("Message Successfully Transmitted!");
+});
+
+</script>
+
+</body>
+</html>
+```
