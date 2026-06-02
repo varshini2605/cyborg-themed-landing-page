@@ -1,6 +1,6 @@
 # 🤖 CYBER-X: Cyborg-Themed Landing Page
 
-## 📌 Project Overview
+## Project Overview
 
 CYBER-X is a futuristic, responsive landing page designed around a cybernetic and artificial intelligence theme. The project showcases modern UI/UX principles, interactive animations, and a visually appealing cyberpunk-inspired design.
 
@@ -8,7 +8,7 @@ The landing page highlights the concept of human-machine integration through adv
 
 ---
 
-## 🚀 Features
+## Features
 
 * Responsive design for desktop, tablet, and mobile devices
 * Futuristic cyberpunk-inspired user interface
@@ -76,7 +76,7 @@ cyborg-themed-landing-page/
 
 ---
 
-## 💡 Design Highlights
+## Design Highlights
 
 The landing page incorporates:
 
@@ -91,12 +91,12 @@ These elements create an immersive futuristic experience aligned with the cyborg
 
 ---
 
-## ▶️ How to Run the Project
+##  How to Run the Project
 
 1. Download or clone the repository:
 
 ```bash
-git clone https://github.com/your-username/cyborg-themed-landing-page.git
+git clone https://github.com/varshini2605/cyborg-themed-landing-page
 ```
 
 2. Open the project folder.
@@ -106,9 +106,10 @@ git clone https://github.com/your-username/cyborg-themed-landing-page.git
 No additional installation or dependencies are required.
 
 ---
+Demo
 
----
-
+Demo Video Link:
+https://drive.google.com/file/d/1P-HFZvL7BDJGsn4ghlSzOuyRN9Z2ylC8/view?usp=sharing
 ## 📈 Future Enhancements
 
 * Dark/Light mode toggle
